@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img name="slide" height="400" width="200"/>
+</body>
+<script>
+var i=0; //start index
+var image=[];
+var time=3000;
+
+//image list
+image[0]='./images/pi.png';
+image[1]='./images/pic1.png';
+image[2]='./images/pic2.png';
+image[3]='./images/pic3.png';
+
+
+function change(){
+    document.slide.src=image[i];
+
+    if(i<image.length -1){
+        i++
+    }
+    else{
+        i=0;
+    }
+    setTimeout('change()',time);
+}
+window.onload=change;
+</script>
+</html>
